@@ -11,10 +11,11 @@ Option A
 Option B
 1. Clone repo
 2. Install [texlive](https://www.tug.org/texlive/)
+   1. On Debian/Ubuntu `sudo apt-get install texlive`
 3. Install required packages
    1. On Debian/Ubuntu `sudo apt-get install texlive-latex-recommended texlive-latex-extra`
-5. Execute `latex resume.tex` to build, then `xdvi resume.dvi &` to view
-6. Execute `pdflatex resume.tex` to generate PDF
+4. Execute `latex resume.tex` to build, then `xdvi resume.dvi &` to view
+5. Execute `pdflatex resume.tex` to generate PDF
 
 ## Credit where it is due
 
