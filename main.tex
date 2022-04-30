@@ -1,0 +1,209 @@
+% This is modified from: https://github.com/dickwyn/resume
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{scrextend}
+
+% \usepackage{showframe} % debugging use only
+
+\geometry{
+  letterpaper,
+  left = 0.5in,
+  right = 0.5in,
+  top = 0.6in,
+  bottom = 0.6in
+}
+
+\hypersetup{
+  colorlinks = true, 
+  linkcolor = blue, 
+  urlcolor  = blue,
+  citecolor = blue, 
+  anchorcolor = blue
+}
+
+% #####################################################
+% #                  Custom Styles                    #
+% #####################################################
+\thispagestyle{empty} % remove page number
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+% #####################################################
+% #                      MACROS                       #
+% #####################################################
+\newcommand{\sectionStart}{
+  \begin{itemize}[label={},leftmargin=0in]
+}
+\newcommand{\sectionEnd}{
+  \end{itemize}
+}
+% Header
+\newcommand{\head}[3]{
+  \noindent
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \centerline{
+      \textbf{{\color{black}{\LARGE {{#1}}}}}
+    }
+    \vspace{5pt}\\
+    \centerline{
+      \href{mailto:#2}{\underline{#2}} $\mid$ {#3}
+    }
+  \end{tabular*}
+  \vspace{-10pt}
+}
+% Summary Text
+\newcommand{\summaryText}[1]{
+  \item
+  \begin{addmargin}[7pt]{0pt}
+    {#1}
+  \end{addmargin}
+}
+% Education Item
+\newcommand{\educationItem}[6]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    {#1 in \textbf{#2}}  & {#3}\\
+    {\textit{#4}, {#5}}\\
+    {#6}\\\vspace{-18pt}
+  \end{tabular*}
+  \vspace{-5pt}
+}
+% Skill Item
+\newcommand{\skillItem}[2]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{}l@{}}
+    {\textbf{#1}: } & {#2}
+  \end{tabular*}\vspace{-17pt}
+}
+% Job Heading
+\newcommand{\jobHeading}[4]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    \normalsize{\textbf{#1}} & #2 \\
+    \textit{\small#3}, {#4}\\
+  \end{tabular*}\vspace{-5pt}
+}
+% Project Heading
+\newcommand{\projectHeading}[4]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    \normalsize{{\href{#1}{#2}} \textbf{#3}} & #4 \\
+  \end{tabular*}\vspace{-5pt}
+}
+% Lists
+\newcommand{\listStart}{\begin{itemize}}
+\newcommand{\listEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\bulletItem}[1]{
+  \item
+  \small{
+    {#1 \vspace{-1.8pt}}
+  }
+}
+
+\begin{document}
+
+% #####################################################
+% #                      HEAD                         #
+% #####################################################
+\head
+  {Thomas E. Smallarz}
+  {tsmallarz@gmail.com}
+  {+1 (701) 893-8602}
+
+% #####################################################
+% #                     SUMMARY                       #
+% #####################################################
+\section{Summary}
+\sectionStart
+  \summaryText
+    {Full-time Software Design Engineer with experience developing Engine Control applications for PowerPC and ARM embedded targets. My current project work mostly involves operating-system level work, focused on embedded security and cryptography implementations. I am seeking opportunities within the field of embedded security.}
+\sectionEnd
+
+% #####################################################
+% #                     SKILLS                        #
+% #####################################################
+\section{Skills}
+\sectionStart
+  \skillItem
+    {Languages}
+    {C, Python, Rust}
+  \skillItem
+    {Tools}
+    {GitHub, Green Hills Tools Suite, MATLAB}
+\sectionEnd
+
+
+% #####################################################
+% #                     EDUCATION                     #
+% #####################################################
+\section{Education}
+\sectionStart
+  \educationItem
+    {Bachelor of Science} 
+    {Electrical Engineering} 
+    {August 2017 - May 2021}
+    {North Dakota State University}
+    {Fargo, ND}
+    {3.70/4.0 - Magna Cum Laude Honors}
+\sectionEnd
+
+% #####################################################
+% #                     EXPERIENCE                    #
+% #####################################################
+\section{Experience}
+\sectionStart
+  \jobHeading
+    {Software Design Engineer - Engine Controllers}
+    {June 2021 - Present}
+    {John Deere Intelligent Solutions Group}
+    {Fargo, ND}
+  \listStart
+    \bulletItem
+    {Designing and developing an embedded security solution to enroll and interface with Company's Device Life-cycle Management System utilizing internal cryptography module}
+  \listEnd
+\sectionEnd
+
+\sectionStart
+  \jobHeading
+    {Electronic Design Part-Time Student Intern - Telematics}
+    {June 2020 - June 2021}
+    {John Deere Intelligent Solutions Group}
+    {Fargo, ND}
+  \listStart
+    \bulletItem
+    {Supported the design and development of Bluetooth, GPS, LTE, and Wi-Fi products by assisting author Engineering Design Notes, schematics, find cost-saving opportunities, and performing circuit verifications on pre-build units to ensure compliance with Stakeholder requirements}
+    \bulletItem
+    {Helped maintain current production through qualifying new parts due to obsolescence and allocation issues}
+    \bulletItem
+    {Provided market analysis by bench-marking and determining estimate costs of competitor electronics}
+  \listEnd
+\sectionEnd
+
+\sectionStart
+  \jobHeading
+    {Electrical Design Engineering Co-op - Wheel Loaders}
+    {April 2019 - April 2019}
+    {CNH Industrial}
+    {Fargo, ND}
+  \listStart
+    \bulletItem
+    {Designed machine software test procedures to meet Stage-V emissions compliance, and meet other product definitions and technical requirements}
+    \bulletItem
+    {Provided initial testing and diagnosis of development machine software and hardware to ensure compliance with standards and communicated with Software Development and Product Validation teams to solve issues}
+    \bulletItem
+    {Participated in and supported prototype builds and product launches}
+  \listEnd
+\sectionEnd
+
+
+\end{document}
