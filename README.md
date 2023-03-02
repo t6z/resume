@@ -1,6 +1,6 @@
 # My resume
 
-This is my current resume as of 01-March-2023
+This is my current resume as of 01-March-2023.
 
 ## Building LaTex
 
