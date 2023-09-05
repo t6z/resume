@@ -92,6 +92,16 @@
     \textit{\small#3}, {#4}\\
   \end{tabular*}\vspace{-5pt}
 }
+% Job Heading (with promotion)
+\newcommand{\jobHeadingTwo}[6]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    \normalsize{\textbf{#1}} & #2 \\
+    \normalsize{\textbf{#3}} & #4 \\
+    \textit{\small#5}, {#6}\\
+  \end{tabular*}\vspace{-5pt}
+}
 % Project Heading
 \newcommand{\projectHeading}[4]{
   \vspace{-1pt}
@@ -126,7 +136,7 @@
 \section{Summary}
 \sectionStart
   \summaryText
-    {Full-time Embedded Software Engineer developing Engine Control applications in Bare Metal and RTOS environments. Most of my current project work involves writing low-level drivers and application code to the fuel system. Previously I've spent time developing embedded security and cryptography implementations.}
+    {Full-time Embedded Software Engineer developing Engine Control applications in Bare Metal and RTOS environments. My current project work involves writing low-level fuel system drivers and applicaiton code for fuel scheduling. Previously I've spent time developing embedded security implementations using on-board cryptography modules.}
 \sectionEnd
 
 % #####################################################
@@ -139,9 +149,8 @@
     {C, Python}
   \skillItem
     {Tools}
-    {GitHub/Mercurial/SVN, Embedded Debugging Platforms, MATLAB}
+    {GitHub/Mercurial, Docker, NPM, Embedded Debugging Platforms, MATLAB}
 \sectionEnd
-
 
 % #####################################################
 % #                     EDUCATION                     #
@@ -162,16 +171,18 @@
 % #####################################################
 \section{Experience}
 \sectionStart
-  \jobHeading
+  \jobHeadingTwo
+    {Embedded Software Engineer II - Engine Controllers}
+    {August 2023 - Present}
     {Embedded Software Engineer - Engine Controllers}
-    {June 2021 - Present}
+    {June 2021 - August 2023}
     {John Deere Intelligent Solutions Group}
     {Fargo, ND}
   \listStart
     \bulletItem
-    {Developed embedded software to drive fuel-system components (injectors, boost supply, high pressure fuel pump) and fueling scheduling}  
+	{Developed embedded software to drive fuel-system components (injectors, boost supply, high pressure fuel pump) and schedule fueling}  
     \bulletItem
-    {Developed an embedded security solution to enroll and interface with Company's Device Life-cycle Management System utilizing internal cryptography module}
+    {Developed an embedded security implementation to enroll and interface with Company's Device Life-cycle Management System utilizing cryptography module}
   \listEnd
 \sectionEnd
 
